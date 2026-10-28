@@ -3,6 +3,9 @@
 A standalone, browser-only formatter for native SmartView Classic Basic Word
 reports. No assistant, account, upload service, build step or backend is required.
 
+The interface defaults to Hebrew and RTL. Keep its copy short and operational;
+do not add slogans, promotional headings or advertising language.
+
 ## Use
 
 1. In SmartView Classic, export a Basic report as Word (.docx), one image record
