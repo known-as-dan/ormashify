@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Format SmartView Word exports as branded Ormash thermal reports, entirely in your browser.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self' blob:; img-src 'self' blob: data:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>ormashify · Thermal report formatter</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./vendor/fflate.min.js"></script>
+  <script defer src="./vendor/pdf-lib.min.js"></script>
+  <script defer src="./vendor/fontkit.umd.min.js"></script>
+  <script defer src="./vendor/bidi.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="wordmark" href="./" aria-label="ormashify home"><span class="brand-symbol">o</span>ormashify<span class="brand-dot">.</span></a>
+    <span class="privacy-badge"><span class="status-dot"></span> Your files stay on your device</span>
+  </header>
+  <main>
+    <section class="workspace-heading"><div><p class="eyebrow">THE THERMAL REPORT FORMATTER</p><h1>A polished report.<br>A few simple steps.</h1></div><p class="intro">Bring your SmartView export.<br>Leave with an Ormash report, ready to share.</p></section>
+    <div class="workspace">
+      <aside class="controls" aria-label="Report setup">
+        <section class="step"><div class="step-heading"><span class="step-number">01</span><h2>Add your report</h2></div>
+          <p class="hint">In SmartView, export your report as a <strong>Basic Word document (.docx)</strong>.</p>
+          <label class="drop-zone" id="drop-zone" for="source-file"><span class="upload-symbol" aria-hidden="true">↥</span><strong id="drop-title">Choose a Word report</strong><span id="drop-subtitle">or drop your .docx here</span><input id="source-file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label>
+          <div id="source-summary" class="source-summary" hidden></div>
+          <details class="help"><summary>Which file do I need?</summary><p>In SmartView Classic, choose the Basic report template and export to Word (.docx). Include one image record per page, with the thermal image, regular photo, image details and both original marker tables.</p><p>Export the image records without separate cover, contents, summary or histogram pages. This app uses the blend already saved in the export.</p><p>PDF, IS2 and maintenance Excel files aren’t supported here. Extra source notes are kept; longer tables or notes continue onto another page.</p></details>
+        </section>
+        <section class="step"><div class="step-heading"><span class="step-number">02</span><h2>Report details</h2></div>
+          <form id="report-form"><label for="site">Full site name</label><input id="site" name="site" autocomplete="off" placeholder="שם האתר המלא" dir="auto" required maxlength="160">
+            <div class="field-row"><div><label for="system">System code</label><input id="system" name="system" placeholder="000-00" autocomplete="off" required maxlength="40"></div><div><label for="inspection-date">Inspection date</label><input id="inspection-date" name="date" type="date" required></div></div>
+            <p class="hint date-hint">Use the inspection date. Original photo timestamps stay unchanged.</p>
+            <button id="generate" class="primary-button" type="submit" disabled>Build report <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+        <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+        <p class="local-note">Processed in your browser. No account, uploads or installation required.</p>
+      </aside>
+      <section class="preview-panel" aria-label="Report preview">
+        <div class="preview-toolbar"><div><span class="preview-dot"></span><strong>Report preview</strong><span id="page-count" class="muted">A4 · Ormash format</span></div><a id="download" class="download-button" hidden>Download PDF <span aria-hidden="true">↓</span></a></div>
+        <div class="preview-stage" id="preview-stage">
+          <div class="paper-placeholder" id="placeholder" aria-label="Empty report preview">
+            <div class="sample-header"><img src="./assets/ormash-logo.png" alt="Ormash Solar Technology"><div dir="rtl"><strong>בדיקה תרמוגרפית</strong><span>שם האתר · קוד מערכת</span><small>תאריך הבדיקה</small></div></div>
+            <div class="sample-rule"></div><p class="sample-caption" dir="rtl">צילום תרמי</p><div class="sample-main"><span class="image-icon" aria-hidden="true">▧</span><p>Your report will appear here</p><small>Original images. A cleaner presentation.</small></div><div class="sample-bottom"><div class="sample-photo"></div><div class="sample-table"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="sample-footer">ORMASH <span>1 / 1</span></div>
+          </div>
+          <div id="pdf-preview" aria-label="Generated Ormash thermal report" hidden><canvas id="pdf-canvas" aria-label="PDF page preview"></canvas><div class="page-navigation"><button id="previous-page" type="button" aria-label="Previous PDF page">←</button><span id="current-page" aria-live="polite"></span><button id="next-page" type="button" aria-label="Next PDF page">→</button></div></div>
+        </div>
+        <div class="preview-footnote"><span>Original camera markers and temperature scales are preserved.</span><span>No additional measurement points.</span></div>
+      </section>
+    </div>
+  </main>
+  <footer class="app-footer"><span>ormashify <span class="muted">/ made for Ormash</span></span><span class="muted">SmartView in. Ormash out.</span></footer>
+</body>
+</html>

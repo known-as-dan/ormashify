@@ -1,0 +1,102 @@
+{
+  "versions": {
+    "pdf-lib": "1.17.1",
+    "@pdf-lib/fontkit": "1.1.1",
+    "fflate": "0.8.2",
+    "bidi-js": "1.0.3",
+    "pdfjs-dist": "6.4.299"
+  },
+  "source": "Versioned npm distributions; Noto fonts from notofonts/noto-fonts; authoritative Ormash logo.",
+  "files": [
+    {
+      "path": "assets/favicon.svg",
+      "sha256": "7d3fdb82830a9cce7121eab8b89919abfdfd6508dde7982e8f575f12e5ce9c65",
+      "bytes": 196
+    },
+    {
+      "path": "assets/NotoSans-Bold.ttf",
+      "sha256": "c976e4b1b99edc88775377fcc21692ca4bfa46b6d6ca6522bfda505b28ff9d6a",
+      "bytes": 575740
+    },
+    {
+      "path": "assets/NotoSans-Regular.ttf",
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "bytes": 569208
+    },
+    {
+      "path": "assets/NotoSansHebrew-Bold.ttf",
+      "sha256": "a30243d1c625eaf63bb889f036fe9de97e81d9248976f89e6e4252f9668c832e",
+      "bytes": 27164
+    },
+    {
+      "path": "assets/NotoSansHebrew-Regular.ttf",
+      "sha256": "a7fa16fffb27bedb060a0866267c29e9859aeb9c21cc33f5b3aaf6eb062eca85",
+      "bytes": 26900
+    },
+    {
+      "path": "assets/OFL.txt",
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+      "bytes": 4377
+    },
+    {
+      "path": "assets/ormash-logo.png",
+      "sha256": "eefb7501333ca8c5840068842d1bb55f34ede28f8b91fe5b48ccd7cddbcb79eb",
+      "bytes": 25016
+    },
+    {
+      "path": "vendor/bidi.min.js",
+      "sha256": "c1a3e0eb8b715fd8cefc6efd6cfd7d106a4a771ebf15de4132efeb79b61f9a53",
+      "bytes": 12148
+    },
+    {
+      "path": "vendor/fflate.min.js",
+      "sha256": "c3b34f2e9f5e74d4d7d64e01cac7a0c01954c6c406414d42185c7b53d6875ddf",
+      "bytes": 32665
+    },
+    {
+      "path": "vendor/fontkit.umd.min.js",
+      "sha256": "d8df561b9fba98e24f2e5130e40948809281bbbc55a20c412359f1a0a5eb35a6",
+      "bytes": 758440
+    },
+    {
+      "path": "vendor/LICENSE-bidi-js",
+      "sha256": "49d4d143fed599deb502a0fe6e02f49832f87e9a3a4cd0502e469596d50faa6d",
+      "bytes": 1071
+    },
+    {
+      "path": "vendor/LICENSE-fflate",
+      "sha256": "805f6cb28bb8b6d3a0badd83c93bccd9671fa01a3b4b92b7042b0743325ac243",
+      "bytes": 1069
+    },
+    {
+      "path": "vendor/LICENSE-fontkit",
+      "sha256": "89648e39090fc2c01870c6908d81ba601ce3a40263ddeecd7f29febb21706842",
+      "bytes": 1212
+    },
+    {
+      "path": "vendor/LICENSE-pdf-lib",
+      "sha256": "f2c9fc00fdb66eb99ac156ba52d734af66d8d309f65753ae809ad34ee2883bcb",
+      "bytes": 1070
+    },
+    {
+      "path": "vendor/LICENSE-pdfjs",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174
+    },
+    {
+      "path": "vendor/pdf-lib.min.js",
+      "sha256": "0f9a5cad07941f0826586c94e089d89b918c46e5c17cf2d5a3c6f666e3bc694f",
+      "bytes": 525099
+    },
+    {
+      "path": "vendor/pdf.min.mjs",
+      "sha256": "57456c8e0c81e46be31174b499ef77f2b9f5ee46d04412ba627320a36755d4c2",
+      "bytes": 458904
+    },
+    {
+      "path": "vendor/pdf.worker.min.mjs",
+      "sha256": "9536359f1b8367850d485731ca1d5e45c159a7b7a0912325e539937aa21ceb18",
+      "bytes": 1264342
+    }
+  ]
+}
