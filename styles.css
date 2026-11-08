@@ -16,7 +16,8 @@ html[lang=he] .hint{font-size:12px}
 html[lang=he] .primary-button{margin-top:19px}
 html[lang=he] .sample-header,html[lang=he] .sample-bottom,html[lang=he] .sample-footer{direction:ltr}
 html[lang=he] .sample-caption{text-align:right}
-.wordmark img{display:block;width:auto;height:40px}
+.wordmark{margin-block-start:8px}
+.wordmark img{display:block;width:auto;height:42px}
 html[lang=he] .preview-toolbar .muted{margin:0 9px 0 0}
 html[lang=he] .download-button span{margin:0 9px 0 0}
 html[lang=he] .preview-stage{min-height:650px}
